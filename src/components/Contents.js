@@ -1,7 +1,7 @@
 import React ,{useEffect,useState}from 'react'
 import axios from "axios";
 
-import { My_api_key } from './config.js'
+import { My_api_key } from '../config.js'                            // 🦄2)  My_api_key 
 
 
 
@@ -14,7 +14,7 @@ const Contents = () => {
         method: 'GET',
         url: 'https://corona-virus-world-and-india-data.p.rapidapi.com/api',
         headers: {
-          'x-rapidapi-key': My_api_key ,
+          'x-rapidapi-key': My_api_key ,                           // 🦄2)  My_api_key 
           'x-rapidapi-host': 'corona-virus-world-and-india-data.p.rapidapi.com'
         }
       };
@@ -31,10 +31,11 @@ const Contents = () => {
 
 
     return (
-        <div>
-        contents
-            
-        </div>
+        <section>        
+            <h2>covid graph</h2>
+            <div className="contents">
+            </div>      
+        </section>
     )
 }
 
